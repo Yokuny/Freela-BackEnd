@@ -1,0 +1,39 @@
+{
+  "name": "projeto18-freela-back",
+  "main": "./src/app.js",
+  "type": "module",
+  "scripts": {
+    "test": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.9.2",
+    "pg": "^8.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "github",
+    "back-end",
+    "SCRUM",
+    "API"
+  ],
+  "author": "yokuny",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yokuny/projeto18-freela-back.git"
+  },
+  "description": " Backend que permite aos usuários escolher sua cidade de destino a partir de uma lista pré-determinada, exibindo listas de passagens e hospedagens nesse destino. As listas podem ser filtradas por faixa de preços e exibir detalhes completos das passagens e hospedagens selecionadas. O backend inclui endpoints para adicionar viagens e passagens.",
+  "homepage": "https://github.com/Yokuny/projeto18-freela-back#readme",
+  "version": "1.0.0",
+  "bugs": {
+    "url": "https://github.com/Yokuny/projeto18-freela-back/issues"
+  }
+}
