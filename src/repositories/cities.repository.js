@@ -1,14 +1,16 @@
 import db from "../database/db.database.js";
 
-const getCities = async (req, res) => {
-  const { rows } = await db.query("SELECT * FROM cities");
-  return res.json(rows);
+const getCities = async () => {
+  const query = "SELECT nome, id FROM cidades";
+  try {
+    const { rows: cities } = await db.query(query);
+    if (cities.length === 0) {
+      throw new Error("No cities found");
+    }
+    return cities;
+  } catch (error) {
+    throw new Error("No cities found");
+  }
 };
 
-const getCitiesDetails = async (req, res) => {
-  const { id } = req.params;
-  const { rows } = await db.query("SELECT * FROM cities WHERE id = $1", [id]);
-  return res.json(rows);
-};
-
-export default { getCities, getCitiesDetails };
+export default { getCities };
