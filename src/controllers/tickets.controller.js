@@ -8,6 +8,12 @@ const getTickets = async (req, res) => {
   }
 };
 const getTicketsDetails = async (req, res) => {
-  return res.send("getTicketsDetails");
+  try {
+    const ticket = await process.getTicketInfo(req.params.id);
+
+    return res.status(200).json(ticket);
+  } catch (error) {
+    return res.status(500).json(error);
+  }
 };
 export default { getTickets, getTicketsDetails };
