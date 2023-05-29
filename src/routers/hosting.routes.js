@@ -4,6 +4,6 @@ import process from "../controllers/hosting.controller.js";
 const hosting = Router();
 
 hosting.get("/hospedagens/:id", process.getHosting);
-hosting.get("/hospedagens/details/:id", process.getHostingInfo);
+hosting.get("/hospedagens/details/:id", process.getHostingDetail);
 
 export default hosting;
