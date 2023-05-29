@@ -3,7 +3,7 @@ import process from "../controllers/hosting.controller.js";
 
 const hosting = Router();
 
-hosting.get("/hospedagens", process.getHosting);
-hosting.get("/hospedagens/:id", process.getHostingInfo);
+hosting.get("/hospedagens/:id", process.getHosting);
+hosting.get("/hospedagens/details/:id", process.getHostingInfo);
 
 export default hosting;
